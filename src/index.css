@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-cream: #FFF9FA;
+  --color-blush-50: #FFF2F5;
+  --color-blush-100: #FFE4EC;
+  --color-blush-200: #FFCAD9;
+  --color-dusty-400: #E58BA6;
+  --color-dusty-500: #C8527B;
+  --color-dusty-600: #AA3B63;
+  --color-cocoa-900: #3E202C;
+  --color-cocoa-700: #6B4454;
+  --color-cocoa-500: #8D6676;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FFF9FA;
+    color: #3E202C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: #FFF9FA;
+    background-image:
+      radial-gradient(circle at 12% 10%, rgba(255, 214, 227, 0.38) 0%, transparent 42%),
+      radial-gradient(circle at 88% 18%, rgba(255, 229, 217, 0.35) 0%, transparent 38%),
+      radial-gradient(circle at 50% 90%, rgba(255, 220, 232, 0.25) 0%, transparent 45%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4.5s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-pop-in {
+    animation: none !important;
+  }
+}

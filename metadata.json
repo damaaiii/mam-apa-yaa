@@ -1,0 +1,6 @@
+{
+  "name": "What to Eat with Mas?",
+  "description": "A sweet pastel food roulette and date-spot planner for two — no more 'terserah, kamu aja' moments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
