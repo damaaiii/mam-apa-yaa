@@ -21,12 +21,14 @@
     font-family: var(--font-sans);
     background-color: #FFF9FA;
     color: #3E202C;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     min-height: 100dvh;
+    overflow-x: hidden;
     background-color: #FFF9FA;
     background-image:
       radial-gradient(circle at 12% 10%, rgba(255, 214, 227, 0.38) 0%, transparent 42%),
@@ -38,6 +40,10 @@
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
   }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .tabular-nums {

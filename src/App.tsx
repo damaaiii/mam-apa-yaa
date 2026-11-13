@@ -7,6 +7,7 @@ import { FoodListView } from './components/FoodListView';
 import { HomeView } from './components/HomeView';
 import { Navbar } from './components/Navbar';
 import { PlaceFormData, PlaceFormModal } from './components/PlaceFormModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { RouletteView } from './components/RouletteView';
 import {
   DatePickRecord,
@@ -188,7 +189,7 @@ export default function App() {
         placesCount={places.length}
       />
 
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-8">
+      <main className="flex-1 w-full max-w-6xl mx-auto px-3.5 min-[375px]:px-4 sm:px-6 pt-5 sm:pt-10 pb-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -249,8 +250,8 @@ export default function App() {
       </main>
 
       {/* Footer with closing tagline & safe space for mobile bottom nav */}
-      <footer className="border-t border-[#F5D8E2] bg-[#FFF9FA]/80 pt-6 pb-22 md:pb-8 mt-6">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <footer className="border-t border-[#F5D8E2] bg-[#FFF9FA]/80 pt-6 pb-24 md:pb-8 mt-6 pb-safe">
+        <div className="max-w-6xl mx-auto px-3.5 min-[375px]:px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <div className="flex items-center gap-2">
             <RibbonBow className="w-5 h-3.5 text-[#C8527B]" />
             <p className="font-display text-sm sm:text-base font-medium text-[#6B4454]">
@@ -262,6 +263,8 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      <OfflineIndicator />
 
       {/* Add / Edit Food Place Modal */}
       <PlaceFormModal

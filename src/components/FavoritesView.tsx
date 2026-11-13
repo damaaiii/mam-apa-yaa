@@ -79,7 +79,7 @@ export function FavoritesView({
               Belum ada tempat favorit nih ♡
             </h2>
             <p className="text-sm text-[#6B4454] mt-2 leading-relaxed">
-              Ketuk ikon hati pada tempat makan yang paling kalian suka di My Food List agar mudah ditemukan di sini.
+              Ketuk ikon hati pada tempat makan yang paling kalian suka di My Places agar mudah ditemukan di sini.
             </p>
             <button
               type="button"
@@ -87,7 +87,7 @@ export function FavoritesView({
               className="mt-6 min-h-[46px] px-6 py-2.5 rounded-2xl bg-[#C8527B] hover:bg-[#AA3B63] text-white text-sm font-semibold inline-flex items-center gap-2 cursor-pointer"
             >
               <Utensils className="w-4 h-4" />
-              <span>Buka My Food List</span>
+              <span>Buka My Places</span>
             </button>
           </div>
         </section>

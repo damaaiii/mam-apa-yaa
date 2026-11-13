@@ -67,8 +67,8 @@ export function FoodListView({
             <SparkleDoodle className="w-3.5 h-3.5 text-[#E58BA6]" />
             <span>Koleksi Tempat Makan Berdua</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold text-[#3E202C]">
-            My Food List
+          <h1 className="font-display text-2xl sm:text-4xl font-semibold text-[#3E202C]">
+            My Places
           </h1>
           <p className="text-sm text-[#6B4454] mt-1 tabular-nums">
             {places.length === 0

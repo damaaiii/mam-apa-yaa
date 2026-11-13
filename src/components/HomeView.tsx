@@ -3,6 +3,7 @@ import { ArrowRight, Disc3, Heart, Plus, Utensils } from 'lucide-react';
 import heroIllustration from '../assets/images/hero_date_food_illustration_1794531182640.jpg';
 import { NavTab } from '../types/food';
 import { HeartDoodle, ResilientImage, RibbonBow, SparkleDoodle } from './Doodles';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HomeViewProps {
   placesCount: number;
@@ -22,19 +23,19 @@ export function HomeView({
   onOpenAddModal,
 }: HomeViewProps) {
   return (
-    <div className="space-y-10 sm:space-y-12">
+    <div className="space-y-8 sm:space-y-12">
       {/* Hero Split */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+      <section className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-stretch">
         {/* Left Column: Copy & Primary CTA */}
-        <div className="lg:col-span-6 flex flex-col justify-center space-y-6 py-2">
+        <div className="lg:col-span-6 flex flex-col justify-center space-y-5 sm:space-y-6 py-1">
           <div className="flex items-center gap-2 text-xs font-semibold tracking-wide text-[#AA3B63]">
             <RibbonBow className="w-6 h-4 text-[#C8527B]" />
             <span>Personal Date Night Food Picker</span>
             <SparkleDoodle className="w-3.5 h-3.5 text-[#E58BA6]" />
           </div>
 
-          <div className="space-y-3">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold text-[#3E202C] leading-[1.1] tracking-tight text-balance">
+          <div className="space-y-2.5 sm:space-y-3">
+            <h1 className="font-display text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold text-[#3E202C] leading-[1.12] tracking-tight text-balance">
               What to Eat with Mas?
             </h1>
             <p className="text-base sm:text-lg text-[#6B4454] leading-relaxed max-w-xl">
@@ -47,11 +48,11 @@ export function HomeView({
           </p>
 
           {/* Primary & Secondary Actions */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-1">
             <button
               type="button"
               onClick={() => onNavigate('roulette')}
-              className="min-h-[50px] px-7 py-3.5 rounded-2xl bg-[#C8527B] hover:bg-[#AA3B63] active:scale-[0.98] text-white font-semibold text-base shadow-md shadow-[#C8527B]/20 inline-flex items-center justify-center gap-2.5 transition-all duration-150 cursor-pointer whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C8527B]"
+              className="min-h-[50px] px-6 sm:px-7 py-3.5 rounded-2xl bg-[#C8527B] hover:bg-[#AA3B63] active:scale-[0.98] text-white font-semibold text-base shadow-md shadow-[#C8527B]/20 inline-flex items-center justify-center gap-2.5 transition-all duration-150 cursor-pointer whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C8527B]"
             >
               <Disc3 className="w-5 h-5" />
               <span>Let&apos;s Pick Our Food!</span>
@@ -65,6 +66,8 @@ export function HomeView({
               <Plus className="w-4 h-4 text-[#C8527B]" />
               <span>Tambah Tempat Makan</span>
             </button>
+
+            <PWAInstallButton />
           </div>
         </div>
 
